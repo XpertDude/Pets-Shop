@@ -15,13 +15,9 @@ JavaScript: Handles interactive elements and dynamic content.
 Back-end Framework (To be integrated): [e.g., Node.js, Django] - Future plans to implement order processing and more dynamic features.
 Installation
 Clone the repository:
-bash
-Copy code
-git clone https://github.com/yourusername/cat-dog-shop-website.git](https://github.com/XpertDude/Pets-Shop
+git clone https://github.com/XpertDude/Pets-Shop
 Navigate to the project directory:
-bash
-Copy code
-cd cat-dog-shop-website
+cd Pets-Shop
 Open index.html in your web browser to view the site.
 Contributing
 We welcome contributions! Whether it's fixing bugs, adding new features, or enhancing the design, your help is appreciated.
