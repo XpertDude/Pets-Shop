@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Animal shop</title>
+    <title>Pets shop</title>
 </head>
 <body>
     <nav class="nav-bar">
@@ -38,16 +38,16 @@
         </section>
             <section class="contact-form">
         <form id="contact" action="" method="POST">
-            <label for="name" id="name">
-                <input type="text" id="name" placeholder="Name" required aria-required="">
+            <label for="name">
+                <input type="text" id="name" placeholder="Name" required aria-required="" autocomplete="additional-name">
             </label>
-            <label for="email" id="email">
-                <input type="email" id="email" placeholder="Email" required aria-required="">
+            <label for="email">
+                <input type="email" id="email" placeholder="Email" required aria-required="" autocomplete="address-level1">
             </label>
-            <label for="subject" id="subject">
+            <label for="subject">
             <input type="text" value="" id="subject" placeholder="Subject">
             </label>
-        <label for="message" id="message">
+        <label for="message">
             <textarea name="message" id="message" maxlength="10000" required aria-required="" placeholder="Write your message here"></textarea>
         </label>
         <button type="submit">SUBMIT</button>
