@@ -17,7 +17,7 @@ Installation
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/yourusername/cat-dog-shop-website.git
+git clone https://github.com/yourusername/cat-dog-shop-website.git](https://github.com/XpertDude/Pets-Shop
 Navigate to the project directory:
 bash
 Copy code
