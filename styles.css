@@ -66,6 +66,9 @@ hr{
     padding: 60px;
 }
 
+info a{
+    text-decoration: none;
+}
 
 .info {
     position: relative;
