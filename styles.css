@@ -11,6 +11,10 @@ body, html{
 
 }
 
+a{
+    text-decoration: none;
+}
+
 .menu{
     visibility: hidden;
 }
