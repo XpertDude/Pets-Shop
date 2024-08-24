@@ -10,13 +10,11 @@ function sendToWhatsApp() {
                         + "Subject: " + subject + " "
                         + "Message: " + message;
 
-    // WhatsApp number (replace with the number you want to send the message to)
-    let whatsappNumber = "+212773192006"; // Replace with your number
+    let whatsappNumber = "+212773192006";
 
     // Create the WhatsApp URL
     let whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + whatsappMessage;
 
-    // Open WhatsApp with the message pre-filled
     if (name === '' || message === '') {
         alert('Please fill up the input fields')
     }else{
