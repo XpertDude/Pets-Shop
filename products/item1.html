@@ -18,7 +18,24 @@
         th {
             width: 20%;
         }
-        .image-slider {
+
+        .whatsapp-button {
+    background-color: #25D366;
+    width: 100%;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.whatsapp-button:hover {
+    background-color: #20b858;
+}
+
+
+.image-slider {
     position: relative;
     width: 400px;
     margin: auto;
@@ -60,6 +77,13 @@ button.prev:hover, button.next:hover{
     padding: 12px;
 }
 
+#order-now{
+    border: 1px solid #b57a4a;
+    background-color: #f5f3f2;
+    width: 50%;
+    text-align: center;
+}
+
 .buy button{
     border: 1px solid #b57a4a;
     cursor: pointer;
@@ -89,18 +113,18 @@ button.next {
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/Online store - Sell products or services/styles.css">
     <title>Pets shop</title>
 </head>
 <body>
     <nav class="nav-bar">
-        <a href="../index.html"><img src="https://i.ibb.co/HHPvjks/Picsart-24-08-18-19-08-30-538.png" alt="Picsart-24-08-18-19-08-30-538"></a>
+        <a href="index.html"><img src="https://i.ibb.co/HHPvjks/Picsart-24-08-18-19-08-30-538.png" alt="Picsart-24-08-18-19-08-30-538"></a>
     <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../shoppage.html">Shop</a></li>
-        <li><a href="../advices.html">Advices</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="/Online store - Sell products or services/index.html">Home</a></li>
+        <li><a href="/Online store - Sell products or services/about.html">About</a></li>
+        <li><a href="/Online store - Sell products or services/shoppage.html">Shop</a></li>
+        <li><a href="/Online store - Sell products or services/advices.html">Advices</a></li>
+        <li><a href="/Online store - Sell products or services/contact.html">Contact</a></li>
     </ul>
     </nav>
     <hr>
@@ -120,27 +144,31 @@ button.next {
                     </svg></button>
             </div>
         <div class="info-item">
-            <h3>Title of the product</h3>
+            <h3>Item title here</h3>
             <table>
                 <thead>
                     <tr>
                         <th>Price</th>
                         <th>Type of Pet</th>
                         <th>Product Description</th>
-                        <th>Size and Quantity:</th>
-                        <th>Ingredients/Materials:</th>
-                        <th>Shipping Information:</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="color:red ;">$50</td> 
                         <td>Dog</td>              
-                        <td>Dog Food</td>          
-                        <td>5 lbs bag</td>           
-                        <td>Chicken, Rice</td> 
-                        <td>Ships in 2 days</td>     
+                        <td>Dog Food</td>     
                     </tr>
+                </tbody>
+                <thead>
+                    <th>Size and Quantity:</th>
+                        <th>Ingredients/Materials:</th>
+                        <th>Shipping Information:</th>
+                </thead>
+                <tbody>
+                    <td>5 lbs bag</td>           
+                        <td>Chicken, Rice</td> 
+                        <td>Ships in 2 days</td>
                 </tbody>
             </table>
             <p>
@@ -148,11 +176,15 @@ button.next {
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus voluptatum quibusdam ab error ipsa maxime inventore molestiae reprehenderit necessitatibus, voluptas provident consequatur fugit incidunt reiciendis sequi alias. Commodi, sint odit!
             </p>
             <div class="buy">
-                <button>Order Now</button>
+                <button id="method">Order Now</button>
             </div>
         </div>
         </article>
     </section>
+    <dialog id="order-now">
+        <h3>Item title here</h3>
+        <button id="whatsappOrderBtn" class="whatsapp-button">Order via WhatsApp</button>
+    </dialog>
 <script>
     let currentIndex = 0;
 const images = document.querySelectorAll('.image-container img');
@@ -180,7 +212,28 @@ function changeSlide(direction) {
 
 // Initial display
 showSlide(currentIndex);
+// ordering method 1
+const dialog = document.getElementById('order-now');
+const method = document.getElementById('method');
+const orderBtn = document.getElementById('whatsappOrderBtn');
+console.log(method)
+function showDialog() {
+    dialog.showModal();
+    document.body.style.filter = 'blur(5px)';
+    console.log('1');
+}
+method.addEventListener('click', showDialog);
 
+orderBtn.addEventListener('click', function() {
+    var productName = "Cat Food"; // Replace with dynamic value
+    var quantity = 2; // Replace with dynamic value
+    var phoneNumber = "+212773192006"; // Replace with your WhatsApp number
+    var message = `Hello, I would like to order this product`;
+    var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, '_blank');
+    dialog.close();
+    document.body.style.filter = 'blur(0)';
+});
 </script>
 </body>
 </html>
