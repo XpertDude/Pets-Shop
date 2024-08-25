@@ -169,10 +169,7 @@ info a{
 }
 
 .products {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
+    display: block;
     padding: 20px;
     margin: 10px;
 }
@@ -192,7 +189,7 @@ info a{
 }
 
 .info-item{
-    
+    width: 100%;
 }
 
 .image-item{
