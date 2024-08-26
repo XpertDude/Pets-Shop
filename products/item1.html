@@ -1,130 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px auto;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        th {
-            width: 20%;
-        }
-
-        .whatsapp-button {
-    background-color: #25D366;
-    width: 100%;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.whatsapp-button:hover {
-    background-color: #20b858;
-}
-
-
-.image-slider {
-    position: relative;
-    width: 400px;
-    margin: auto;
-    border: 1px solid #b57a4a;
-}
-
-.image-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    overflow: hidden;
-}
-
-.image-container img {
-    width: 100%;
-    display: none;
-}
-
-.image-container img.active {
-    display: block;
-}
-
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #ffc558;
-    color: black;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-button.prev:hover, button.next:hover{
-    background-color: #b57a4a;
-    color: #f5f3f2;
-    padding: 12px;
-}
-
-#order-now{
-    border: 1px solid #b57a4a;
-    background-color: #f5f3f2;
-    width: 50%;
-    text-align: center;
-}
-
-.buy button{
-    border: 1px solid #b57a4a;
-    cursor: pointer;
-    padding: 15px;
-    width: 200px;
-    color: black;
-    background-color: #ffc558;
-    transition: 0.5s ease-in-out;
-}
-
-.buy button:hover{
-    color: #f5f3f2;
-    background-color: #b57a4a;
-}
-
-button.prev {
-    left: 0;
-}
-
-button.next {
-    right: 0;
-}
-
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Online store - Sell products or services/styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="items.css">
     <title>Pets shop</title>
 </head>
 <body>
     <nav class="nav-bar">
         <a href="index.html"><img src="https://i.ibb.co/HHPvjks/Picsart-24-08-18-19-08-30-538.png" alt="Picsart-24-08-18-19-08-30-538"></a>
     <ul>
-        <li><a href="/Online store - Sell products or services/index.html">Home</a></li>
-        <li><a href="/Online store - Sell products or services/about.html">About</a></li>
-        <li><a href="/Online store - Sell products or services/shoppage.html">Shop</a></li>
-        <li><a href="/Online store - Sell products or services/advices.html">Advices</a></li>
-        <li><a href="/Online store - Sell products or services/contact.html">Contact</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../shoppage.html">Shop</a></li>
+        <li><a href="../advices.html">Advices</a></li>
+        <li><a href="../contact.html">Contact</a></li>
     </ul>
     </nav>
     <hr>
@@ -133,7 +27,7 @@ button.next {
         <article class="item">
             <div class="image-slider">
                 <div class="image-container">
-                    <img src="https://i.ibb.co/zxY916H/th.jpg" alt="th" border="0">
+                    <img id="main-img" src="https://i.ibb.co/zxY916H/th.jpg" alt="th" border="0">
                     <img src="https://i.ibb.co/PQDbKtS/38a57f31-978c-451a-bdd3-4b65671123f3.jpg" alt="38a57f31-978c-451a-bdd3-4b65671123f3">
                 </div>
                 <button class="prev" onclick="changeSlide(-1)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
@@ -144,20 +38,22 @@ button.next {
                     </svg></button>
             </div>
         <div class="info-item">
-            <h3>Item title here</h3>
+            <h1 class="item-title" style="color: #b57a4a; font-size: 25px; font-weight: bolder;">Title gose here</h1>
             <table>
                 <thead>
                     <tr>
                         <th>Price</th>
                         <th>Type of Pet</th>
                         <th>Product Description</th>
+                        <th>Brand</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="color:red ;">$50</td> 
+                        <td style="color:red ; font-weight: bolder;">$50</td> 
                         <td>Dog</td>              
-                        <td>Dog Food</td>     
+                        <td>Dog Food</td>
+                        <td>brand</td>     
                     </tr>
                 </tbody>
                 <thead>
@@ -175,65 +71,45 @@ button.next {
                 <h4>Full Description:</h4>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus voluptatum quibusdam ab error ipsa maxime inventore molestiae reprehenderit necessitatibus, voluptas provident consequatur fugit incidunt reiciendis sequi alias. Commodi, sint odit!
             </p>
+            <h4>Please fill in your choices:</h4>
             <div class="buy">
-                <button id="method">Order Now</button>
+                <button id="method">Place the order</button>
+                <label for="quantity" style="font-weight: bold; color: #b57a4a;">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="" disabled>Quantity</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+                <label for="pet-age" style="font-weight: bold; color: #b57a4a;">Pet age</label>
+                <select name="" id="pet-age">
+                    <option value="" disabled style="color: #b57a4a; font-weight: bolder;">For Cats</option>
+                    <option value="Kitten (0-12 months)">Kitten (0-12 months)</option>
+                    <option value="Adult Cat (1-7 years)">Adult Cat (1-7 years)</option>
+                    <option value="Senior Cat (7+ years)">Senior Cat (7+ years)</option>
+                    <option value="" disabled style="color: #b57a4a; font-weight: bolder;">For Dog</option>
+                    <option value="Puppy (0-12 months, varies by breed size)">Puppy (0-12 months, varies by breed size)</option>
+                    <option value="Adult Dog (1-7 years, varies by breed size)">Adult Dog (1-7 years, varies by breed size)</option>
+                    <option value="Senior Dog (7+ years, varies by breed size)">Senior Dog (7+ years, varies by breed size)</option>
+                </select>
             </div>
         </div>
         </article>
     </section>
     <dialog id="order-now">
-        <h3>Item title here</h3>
-        <button id="whatsappOrderBtn" class="whatsapp-button">Order via WhatsApp</button>
+        <div id="btn-exit"><svg style="color: #b57a4a;"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+        </svg></div>
+        <div id="order-container">
+            
+        </div>
+        <button id="whatsappOrderBtn" class="whatsapp-button">Confirm via whatsApp</button>
     </dialog>
-<script>
-    let currentIndex = 0;
-const images = document.querySelectorAll('.image-container img');
-
-function showSlide(index) {
-    images.forEach((img, i) => {
-        img.classList.remove('active');
-        if (i === index) {
-            img.classList.add('active');
-        }
-    });
-}
-
-function changeSlide(direction) {
-    currentIndex += direction;
-
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1;
-    } else if (currentIndex >= images.length) {
-        currentIndex = 0;
-    }
-
-    showSlide(currentIndex);
-}
-
-// Initial display
-showSlide(currentIndex);
-// ordering method 1
-const dialog = document.getElementById('order-now');
-const method = document.getElementById('method');
-const orderBtn = document.getElementById('whatsappOrderBtn');
-console.log(method)
-function showDialog() {
-    dialog.showModal();
-    document.body.style.filter = 'blur(5px)';
-    console.log('1');
-}
-method.addEventListener('click', showDialog);
-
-orderBtn.addEventListener('click', function() {
-    var productName = "Cat Food"; // Replace with dynamic value
-    var quantity = 2; // Replace with dynamic value
-    var phoneNumber = "+212773192006"; // Replace with your WhatsApp number
-    var message = `Hello, I would like to order this product`;
-    var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL, '_blank');
-    dialog.close();
-    document.body.style.filter = 'blur(0)';
-});
-</script>
+    <script src="items.js"></script>
 </body>
 </html>
