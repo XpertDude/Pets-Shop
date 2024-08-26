@@ -169,9 +169,13 @@ info a{
 }
 
 .products {
-    display: block;
-    padding: 20px;
-    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: self-start;
+    gap: 20px;
+    padding: 10px;
+    margin: auto ;
 }
 
 .image-item img{
@@ -200,7 +204,7 @@ info a{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: max-content;
-    gap: 10px;
+    gap: 15px;
 }
 
 .categories {
@@ -209,6 +213,7 @@ info a{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 10px;
 }
 
 .categories a{
@@ -223,12 +228,13 @@ info a{
 }
 
 .product-item{
-    width: 200px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+    object-fit: fill;
     transition: 0.5s ease;
 }
 
@@ -256,7 +262,6 @@ info a{
 .product-item h3{
     text-wrap: wrap;
     max-height: 40px;
-    overflow: hidden;
 }
 
 .prd-img img{
@@ -575,9 +580,64 @@ h4{
         width: auto;
     }
 
-}
+    .articles{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 200px;
+    }
+    
+    .categories {
+        font-size: 8px;
+        gap: 8px;
+    }
 
+    .item{
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 2px;
+        font-size: 10px;
+        width: 100%;
+    }
+    
+    th, td {
+        padding: 6px;
+    }
+    
+    th {
+        background-color: #EEE;
+        width: 100%;
+    }
+
+    .products {
+        width: 100%;
+        display: block;
+        gap: 0;
+        padding: 2px;
+    }
+
+    .buy{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+/*for lower screen size*/
 @media screen and (max-width: 500px) {
+    .articles{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 200px;
+    }
+    
+    .categories {
+        font-size: 8px;
+        gap: 8px;
+    }
     .nav-bar{
         width: 100%;
         height: auto;
