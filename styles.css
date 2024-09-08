@@ -5,6 +5,7 @@ body, html{
     font-optical-sizing: auto;
     background-color: var(--main-color);
     box-sizing: border-box;
+    position: relative;
 }
 :root{
     --main-color: #f5f3f2;
@@ -17,6 +18,73 @@ a{
     padding: 5px;
 }
 
+main{
+    position: relative;
+}
+
+#shop-icon{
+    position: relative;
+    right: 20px;
+    top: 0;
+    cursor: pointer;
+}
+
+#shop-icon svg{
+    position: absolute;
+    right: 0;
+}
+
+#number-items{
+    position: relative;
+}
+
+#number-items div{
+    position: absolute;
+    right: -10px;
+    top: -20px;
+}
+
+#number-items div p{
+    background-color: red;
+    color: antiquewhite;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+#cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: xx-small;
+    border: 1px solid var(--text-color);
+    background-color: var(--button-color);
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    padding: 4px;
+    margin: 6px;
+    transition: 0.4s ease-in-out;
+    visibility: hidden;
+}
+
+#cart div:nth-child(1){
+    width: 70px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+#cart div img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
 
 .nav-bar{
     position: static;
@@ -199,9 +267,10 @@ info a{
     border: 1px solid var(--text-color);
 }
 
-.articles{
+.articles {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
     grid-template-rows: max-content;
     gap: 15px;
 }
@@ -509,6 +578,15 @@ h4{
 }
 
 /* styles for phones and tablets*/
+@media screen and (max-width: 1200px){
+    .articles{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: max-content;
+        gap: 15px;
+        row-gap: 180px;
+    }
+}
 @media screen and (max-width: 1000px) {
     .nav-bar{
         width: 100%;
@@ -521,6 +599,15 @@ h4{
     .nav-bar img{
         width: 40px;
         height: 30px;
+    }
+
+    .articles{
+        display: grid;
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: max-content;
+        gap: 15px;
+        row-gap: 180px;
     }
 
     .about{
@@ -579,11 +666,6 @@ h4{
         width: auto;
     }
 
-    .articles{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 200px;
-    }
     
     .categories {
         font-size: 8px;
@@ -611,7 +693,8 @@ h4{
 
     .products {
         width: 100%;
-        display: block;
+        display: grid;
+        grid-template-columns: 200px 1fr;
         gap: 0;
         padding: 2px;
     }
@@ -625,13 +708,21 @@ h4{
     }
 
 }
+@media screen and (max-width: 740px) {
+    .articles{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 180px;
+        padding: 10px;
+    }
+}
 /*for lower screen size*/
 @media screen and (max-width: 500px) {
     .articles{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 200px;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 180px;
+        padding: 10px;
     }
+
     
     .categories {
         font-size: 8px;
